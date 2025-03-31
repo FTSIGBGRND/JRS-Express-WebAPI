@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Fasttrack Files\Fasttrack Projects\JRS Express Integration\Source Code\JRS Express - FTSI Web API System Integration\FTSI Web API System Integration\bin\Release\net8.0</_PublishTargetUrl>
+    <History>True|2025-02-05T02:45:54.4082106Z||;True|2025-01-31T11:25:37.4108335+08:00||;True|2025-01-31T10:38:08.5726895+08:00||;True|2025-01-31T10:37:03.3065299+08:00||;True|2025-01-22T17:14:16.9495569+08:00||;True|2025-01-14T08:14:29.6059415+08:00||;True|2025-01-09T17:57:51.8090197+08:00||;True|2025-01-09T17:56:28.1143623+08:00||;True|2025-01-09T17:41:23.9316334+08:00||;True|2025-01-08T11:09:47.0628602+08:00||;True|2025-01-08T10:20:56.4258051+08:00||;True|2025-01-07T14:07:29.1382082+08:00||;True|2025-01-06T19:03:25.2406514+08:00||;True|2024-12-26T16:41:59.5930816+08:00||;True|2024-12-26T14:14:10.5907452+08:00||;True|2024-12-26T10:16:57.6381079+08:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="FTDBWConnection">
+      <Value>Server=localhost%3b Initial Catalog=FTDBW_JRS%3b User=root%3b Password=%27%27</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="FTSI_Web_API_System_Integration.Data.FTDBWContext">
+      <Value>Server=localhost%3b Initial Catalog=FTDBW_JRS%3b User=root%3b Password=%27%27</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

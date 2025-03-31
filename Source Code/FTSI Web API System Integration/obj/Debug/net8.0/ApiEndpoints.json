@@ -1,0 +1,174 @@
+[
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "FTSI_Web_API_System_Integration.Controllers.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.ARCreditMemoController",
+    "Method": "GetInquiry",
+    "RelativePath": "api/documents/arcreditmemo/inquiry/{submitId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submitId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.InquiryResultDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.ARCreditMemoController",
+    "Method": "PostARCreditMemoService",
+    "RelativePath": "api/documents/arcreditmemo/services",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "FTSI_Web_API_System_Integration.DTOs.ARInvoice.PostARCreditMemoServicesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.PostRangeResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.ARInvoiceController",
+    "Method": "GetInquiry",
+    "RelativePath": "api/documents/arinvoice/inquiry/{submitId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submitId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.InquiryResultDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.ARInvoiceController",
+    "Method": "PostARInvoiceService",
+    "RelativePath": "api/documents/arinvoice/services",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "FTSI_Web_API_System_Integration.DTOs.ARInvoice.PostARInvoiceServicesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.PostRangeResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.IncomingPaymentController",
+    "Method": "Post",
+    "RelativePath": "api/payments/incoming",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "FTSI_Web_API_System_Integration.DTOs.IncomingPayment.PostIncomingPaymentsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.PostResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FTSI_Web_API_System_Integration.Controllers.IncomingPaymentController",
+    "Method": "GetInquiry",
+    "RelativePath": "api/payments/incoming/inquiry/{submitId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submitId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FTSI_Web_API_System_Integration.DTOs.InquiryResultDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

@@ -1,0 +1,1163 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "JRS Web API System Integration",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/documents/arcreditmemo/services": {
+      "post": {
+        "tags": [
+          "ARCreditMemo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARCreditMemoServicesDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARCreditMemoServicesDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARCreditMemoServicesDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/arcreditmemo/inquiry/{submitId}": {
+      "get": {
+        "tags": [
+          "ARCreditMemo"
+        ],
+        "parameters": [
+          {
+            "name": "submitId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/arinvoice/services": {
+      "post": {
+        "tags": [
+          "ARInvoice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARInvoiceServicesDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARInvoiceServicesDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostARInvoiceServicesDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRangeResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/arinvoice/inquiry/{submitId}": {
+      "get": {
+        "tags": [
+          "ARInvoice"
+        ],
+        "parameters": [
+          {
+            "name": "submitId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/payments/incoming": {
+      "post": {
+        "tags": [
+          "IncomingPayment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIncomingPaymentsDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIncomingPaymentsDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIncomingPaymentsDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/payments/incoming/inquiry/{submitId}": {
+      "get": {
+        "tags": [
+          "IncomingPayment"
+        ],
+        "parameters": [
+          {
+            "name": "submitId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InquiryResultDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ARCreditMemoServiceHeaderDTO": {
+        "required": [
+          "cardCode",
+          "comments",
+          "docDate",
+          "docDueDate",
+          "documentLines",
+          "numAtCard",
+          "taxDate",
+          "u_JRSBranch",
+          "u_RefNum",
+          "u_SalesType",
+          "u_TransactionType"
+        ],
+        "type": "object",
+        "properties": {
+          "docDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "docDueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "taxDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "cardCode": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cardName": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "numAtCard": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "comments": {
+            "maxLength": 254,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_JRSBranch": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_TransactionType": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_SalesType": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_ParentBP": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "u_AirwayBillNo": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "documentLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARCreditMemoServiceLinesDTO"
+            }
+          },
+          "documentWTax": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARCreditMemoWTaxDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ARCreditMemoServiceLinesDTO": {
+        "required": [
+          "acctCode",
+          "lineNum",
+          "priceAfVAT",
+          "vatGroup"
+        ],
+        "type": "object",
+        "properties": {
+          "lineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dscription": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          },
+          "acctCode": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "discPrcnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "priceBefDi": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "vatGroup": {
+            "maxLength": 4,
+            "minLength": 1,
+            "type": "string"
+          },
+          "priceAfVAT": {
+            "type": "number",
+            "format": "double"
+          },
+          "wtLiable": {
+            "pattern": "^(N|Y)$",
+            "type": "string",
+            "default": "N",
+            "nullable": true
+          },
+          "ocrCode": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode2": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode3": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode4": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode5": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xWTVendor": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTaxbleAmnt": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTaxAmnt": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xSupplierName": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xAddress": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTINnumber": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xCardType": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_SalesType": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ARCreditMemoWTaxDTO": {
+        "type": "object",
+        "properties": {
+          "wtCode": {
+            "maxLength": 4,
+            "type": "string",
+            "nullable": true
+          },
+          "taxbleAmnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "wtAmnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ARInvoiceServiceHeaderDTO": {
+        "required": [
+          "cardCode",
+          "comments",
+          "docDate",
+          "docDueDate",
+          "documentLines",
+          "numAtCard",
+          "taxDate",
+          "u_JRSBranch",
+          "u_RefNum",
+          "u_SalesType",
+          "u_TransactionType"
+        ],
+        "type": "object",
+        "properties": {
+          "docDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "docDueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "taxDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "cardCode": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cardName": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "numAtCard": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "comments": {
+            "maxLength": 254,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_JRSBranch": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_TransactionType": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_SalesType": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "u_ParentBP": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "u_AirwayBillNo": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "documentLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARInvoiceServiceLinesDTO"
+            }
+          },
+          "documentWTax": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARInvoiceWTaxDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ARInvoiceServiceLinesDTO": {
+        "required": [
+          "acctCode",
+          "lineNum",
+          "priceAfVAT",
+          "vatGroup"
+        ],
+        "type": "object",
+        "properties": {
+          "lineNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dscription": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          },
+          "acctCode": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "discPrcnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "priceBefDi": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "vatGroup": {
+            "maxLength": 4,
+            "minLength": 1,
+            "type": "string"
+          },
+          "priceAfVAT": {
+            "type": "number",
+            "format": "double"
+          },
+          "wtLiable": {
+            "pattern": "^(N|Y)$",
+            "type": "string",
+            "default": "N",
+            "nullable": true
+          },
+          "ocrCode": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode2": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode3": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode4": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "ocrCode5": {
+            "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xWTVendor": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTaxbleAmnt": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTaxAmnt": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xSupplierName": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xAddress": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xTINnumber": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_xCardType": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "u_SalesType": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ARInvoiceWTaxDTO": {
+        "type": "object",
+        "properties": {
+          "wtCode": {
+            "maxLength": 4,
+            "type": "string",
+            "nullable": true
+          },
+          "taxbleAmnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "wtAmnt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncomingPaymentChecksDTO": {
+        "required": [
+          "bankCode",
+          "checkNum",
+          "checkSum",
+          "dueDate"
+        ],
+        "type": "object",
+        "properties": {
+          "dueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "checkNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checkSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "bankCode": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncomingPaymentCreditCardDTO": {
+        "required": [
+          "cardValid",
+          "crCardNum",
+          "crTypeCode",
+          "creditAcct",
+          "creditCard",
+          "creditSum",
+          "lineID",
+          "voucherNum"
+        ],
+        "type": "object",
+        "properties": {
+          "lineID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "creditCard": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "creditAcct": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "crCardNum": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cardValid": {
+            "type": "string",
+            "format": "date"
+          },
+          "voucherNum": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          },
+          "creditSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "crTypeCode": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncomingPaymentHeaderDTO": {
+        "required": [
+          "cardCode",
+          "cardName",
+          "docDate",
+          "paymentInvoices",
+          "trsfrSum",
+          "u_RefNum"
+        ],
+        "type": "object",
+        "properties": {
+          "cardCode": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "cardName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "docDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "cashAccnt": {
+            "type": "string",
+            "nullable": true
+          },
+          "cashSum": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "trsfrAcct": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
+          },
+          "trsfrRef": {
+            "maxLength": 15,
+            "type": "string",
+            "nullable": true
+          },
+          "trsfrSum": {
+            "type": "number",
+            "format": "double"
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "paymentInvoices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IncomingPaymentInvoicesDTO"
+            }
+          },
+          "paymentChecks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IncomingPaymentChecksDTO"
+            },
+            "nullable": true
+          },
+          "paymentCreditCard": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IncomingPaymentCreditCardDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncomingPaymentInvoicesDTO": {
+        "required": [
+          "invType",
+          "u_RefNum"
+        ],
+        "type": "object",
+        "properties": {
+          "lineNum": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "invType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "u_RefNum": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InquiryResultDTO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/InquiryResultData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InquiryResultData": {
+        "type": "object",
+        "properties": {
+          "submitId": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalCountQty": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "processDocuments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProcessDocument"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginModel": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostARCreditMemoServicesDTO": {
+        "required": [
+          "data",
+          "submitId"
+        ],
+        "type": "object",
+        "properties": {
+          "submitId": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARCreditMemoServiceHeaderDTO"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostARInvoiceServicesDTO": {
+        "required": [
+          "data",
+          "submitId"
+        ],
+        "type": "object",
+        "properties": {
+          "submitId": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ARInvoiceServiceHeaderDTO"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostIncomingPaymentsDTO": {
+        "required": [
+          "data",
+          "submitId"
+        ],
+        "type": "object",
+        "properties": {
+          "submitId": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IncomingPaymentHeaderDTO"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostRangeResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PostResponseData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostResponseData": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcessDocument": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "u_RefNum": {
+            "type": "string",
+            "nullable": true
+          },
+          "integrationStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "integrationMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
